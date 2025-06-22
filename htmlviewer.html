@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 24.8.4.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		pre { font-family: "Liberation Mono", monospace; font-size: 10pt; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;hu&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Kiber Maffia Kaja - Instagram Story&lt;/title&gt;
+    &lt;script src=&quot;https://cdn.tailwindcss.com&quot;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&amp;family=Share+Tech+Mono&amp;display=swap');
+        
+        body {
+            font-family: 'Share Tech Mono', monospace; /* Techy, monospace font */
+            background-color: #0a0a0a; /* Deep black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            color: #00ffff; /* Default neon cyan for text */
+        }
+        
+        .story-container {
+            width: 100vw;
+            height: 100vh;
+            max-width: 400px; /* Standard Instagram story width */
+            max-height: 800px; /* Standard Instagram story height */
+            position: relative;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a0a2a 50%, #0a0a0a 100%); /* Dark, futuristic gradient */
+            border-radius: 1rem;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribute content */
+            align-items: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.4), 0 0 30px rgba(255, 0, 255, 0.4); /* Dual neon glow */
+            border: 2px solid #00ffff; /* Outer neon border */
+            box-sizing: border-box;
+        }
+
+        /* Glitch effect for text */
+        .glitch-text {
+            font-family: 'Orbitron', sans-serif; /* Stronger, more futuristic font */
+            font-weight: 700;
+            color: #00ffff;
+            text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px rgba(0, 255, 255, 0.7);
+            position: relative;
+            animation: glitch-skew 3s infinite alternate;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00ff; /* Magenta glitch */
+            animation: glitch-anim-1 3s infinite alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: 2px 0 #00ff00; /* Green glitch */
+            animation: glitch-anim-2 3s infinite alternate;
+        }
+
+        @keyframes glitch-skew {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(-5deg); }
+            40% { transform: skew(5deg); }
+            60% { transform: skew(-2deg); }
+            80% { transform: skew(2deg); }
+            100% { transform: skew(0deg); }
+        }
+
+        @keyframes glitch-anim-1 {
+            0% { clip: rect(20px, 9999px, 40px, 0); }
+            25% { clip: rect(70px, 9999px, 90px, 0); }
+            50% { clip: rect(10px, 9999px, 30px, 0); }
+            75% { clip: rect(50px, 9999px, 70px, 0); }
+            100% { clip: rect(20px, 9999px, 40px, 0); }
+        }
+
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(50px, 9999px, 70px, 0); }
+            25% { clip: rect(10px, 9999px, 30px, 0); }
+            50% { clip: rect(70px, 9999px, 90px, 0); }
+            75% { clip: rect(20px, 9999px, 40px, 0); }
+            100% { clip: rect(50px, 9999px, 70px, 0); }
+        }
+
+
+        .header-text {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .middle-text {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #00ff00; /* Neon green */
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        .arrows-container {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .neon-arrow {
+            width: 40px;
+            height: 40px;
+            border-bottom: 6px solid #ff00ff; /* Neon magenta arrow */
+            border-right: 6px solid #ff00ff;
+            transform: rotate(45deg);
+            box-shadow: 0 0 15px #ff00ff;
+            animation: pulse-arrow 1.2s infinite alternate;
+        }
+
+        @keyframes pulse-arrow {
+            from { opacity: 0.7; transform: rotate(45deg) scale(0.9); }
+            to { opacity: 1; transform: rotate(45deg) scale(1.1); }
+        }
+
+        .contact-info { /* This class now primarily styles the Telegram link */
+            font-size: 1.8rem; /* Larger for more emphasis */
+            text-align: center;
+            color: #00aaff; /* Telegram blue */
+            text-shadow: 0 0 10px #00aaff;
+            font-weight: bold;
+            display: flex; /* To center the link effectively */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: auto; /* Allow content to dictate height */
+        }
+        
+        .contact-info a {
+            color: inherit; /* Inherit color from parent */
+            text-decoration: none; /* No underline */
+            padding: 0.5rem 1rem; /* Make it a larger tap target */
+            border: 2px solid #00aaff;
+            border-radius: 0.5rem;
+            background-color: rgba(0, 170, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .contact-info a:hover {
+            background-color: rgba(0, 170, 255, 0.3);
+            box-shadow: 0 0 20px #00aaff;
+        }
+
+        /* City background element - non-interactive, purely visual */
+        .city-background-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://placehold.co/400x800/0a0a0a/0d1a26?text=CYBERPUNK+CITY'); /* Placeholder for a dark cyberpunk city skyline */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3; /* Subtle background */
+            z-index: -1; /* Behind other content */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 380px) {
+            .header-text {
+                font-size: 2rem;
+            }
+            .middle-text {
+                font-size: 1.2rem;
+            }
+            .contact-info {
+                font-size: 1.4rem;
+            }
+            .neon-arrow {
+                width: 30px;
+                height: 30px;
+                border-width: 4px;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;story-container&quot;&gt;
+        &lt;div class=&quot;city-background-effect&quot;&gt;&lt;/div&gt;
+
+        &lt;div class=&quot;header-text glitch-text&quot; data-text=&quot;🍔 INGYEN KAJÁL?&quot;&gt;
+            🍔 INGYEN KAJÁL?
+        &lt;/div&gt;
+        &lt;div class=&quot;header-text glitch-text&quot; data-text=&quot;VAGY AKÁR -60%? 💸&quot;&gt;
+            VAGY AKÁR -60%? 💸
+        &lt;/div&gt;
+
+        &lt;div class=&quot;middle-text&quot;&gt;
+            GYORS, ANONIM, KRIPTÓVAL ⚡️&lt;br/&gt;
+            EURÓPA-SZERTE 🚀
+        &lt;/div&gt;
+
+        &lt;div class=&quot;arrows-container&quot;&gt;
+            &lt;div class=&quot;neon-arrow&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;neon-arrow&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;neon-arrow&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;contact-info glitch-text&quot; data-text=&quot;Telegram: @m1000cage&quot;&gt;
+            &lt;a href=&quot;https://t.me/m1000cage&quot; target=&quot;_blank&quot;&gt;Telegram: @m1000cage&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
